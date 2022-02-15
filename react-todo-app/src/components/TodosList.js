@@ -13,6 +13,9 @@ const TodosList = (props) => {
   );
 };
 
-TodosList.propTypes = { todos: PropType.instanceOf(Array).isRequired };
+TodosList.propTypes = {
+  todos: PropType.instanceOf(Array).isRequired,
+  dispatch: PropType.func.isRequired,
+};
 
 export default TodosList;

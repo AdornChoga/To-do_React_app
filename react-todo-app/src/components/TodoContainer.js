@@ -42,18 +42,18 @@ const TodoContainer = () => {
     e.preventDefault();
     if (title.trim()) {
       dispatch({ type: ACTIONS.ADD_TODO, payload: { title } });
-    } else {
-      alert('Input field is empty!');
     }
   };
   return (
-    <div className="container">
-      <div className="inner">
-        <InputTodo addToDo={addToDo} />
-        <Header />
-        <TodosList todos={todos} dispatch={dispatch} />
+    <>
+      <div className="container">
+        <div className="inner">
+          <Header />
+          <InputTodo addToDo={addToDo} />
+          <TodosList todos={todos} dispatch={dispatch} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

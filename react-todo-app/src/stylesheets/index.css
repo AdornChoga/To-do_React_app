@@ -17,8 +17,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 600px;
   margin: 0 auto;
+  width: 80%;
+  padding: 0 200px;
 }
 
 .inner {
@@ -65,8 +66,49 @@ body {
 }
 
 span.true {
-  font-style: "italic";
-  color: "#595959";
+  font-style: italic;
+  color: #595959;
   opacity: 0.4;
   text-decoration: line-through;
+}
+
+.active-link {
+  color: orangered;
+  text-decoration: underline;
+}
+
+.about-container {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  padding: 150px 20px 0 90px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.about-section-nav {
+  padding: 30px 10px 0 0;
+  list-style-type: none;
+  border-right: 2px solid rgba(0, 0, 0, 0.38);
+}
+
+.about-section-nav li + li {
+  margin-top: 30px;
+}
+
+.about-section-nav li:hover {
+  text-decoration: underline darkblue;
+}
+
+.about-content {
+  width: 70%;
+}
+
+.about-content p {
+  width: 70%;
+  font-size: 20px;
+  font-weight: bold;
+  outline: 3px rgba(0, 0, 0, 0.38) inset;
+  padding: 20px;
 }

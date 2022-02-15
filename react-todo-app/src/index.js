@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './stylesheets/index.css';
-import TodoContainer from './components/TodoContainer';
+import Navbar from './components/Navbar';
+import Views from './Views';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoContainer />
+    <BrowserRouter>
+      <Navbar />
+      <Views />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 );

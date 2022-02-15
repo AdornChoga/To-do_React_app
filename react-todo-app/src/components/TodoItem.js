@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropType from 'prop-types';
+import { FaTrash } from 'react-icons/fa';
 import styles from '../stylesheets/TodoItem.module.css';
 import ACTIONS from './ACTIONS';
 
@@ -45,14 +46,20 @@ const TodoItem = (props) => {
             payload: { id: todo.id },
           })}
         />
-        <button onClick={() => dispatch({
-          type: ACTIONS.DELETE_TODO,
-          payload: { id: todo.id },
-        })}
+        <button
+          type="button"
+          onClick={() => dispatch({
+            type: ACTIONS.DELETE_TODO,
+            payload: { id: todo.id },
+          })}
         >
-          Delete
+          <FaTrash />
         </button>
-        <span className={todo.completed ? 'true' : 'false'} id="todo-title" onClick={handleEditEvent}>
+        <span
+          className={todo.completed ? 'true' : 'false'}
+          id="todo-title"
+          onDoubleClick={handleEditEvent}
+        >
           {title}
         </span>
       </div>
@@ -68,6 +75,9 @@ const TodoItem = (props) => {
   );
 };
 
-TodoItem.propTypes = { todo: PropType.instanceOf(Object).isRequired };
+TodoItem.propTypes = {
+  todo: PropType.instanceOf(Object).isRequired,
+  dispatch: PropType.func.isRequired,
+};
 
 export default TodoItem;
