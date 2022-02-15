@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://adornchoga.github.io/To-do_React_app/)
 
 ## Getting Started
 

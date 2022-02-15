@@ -14,11 +14,13 @@ const Views = () => {
   return (
     <Routes>
       <Route index element={<TodoContainer />} />
-      <Route path="/home" element={<TodoContainer />} />
-      <Route path="/about" element={aboutView}>
-        <Route path="app" element={<AboutApp />} />
-        <Route path="author" element={<Author />} />
-        <Route index element={<AboutApp />} />
+      <Route path="/To-do_React_app">
+        <Route path="home" element={<TodoContainer />} />
+        <Route path="about" element={aboutView}>
+          <Route path="app" element={<AboutApp />} />
+          <Route path="author" element={<Author />} />
+          <Route index element={<AboutApp />} />
+        </Route>
       </Route>
     </Routes>
   );
