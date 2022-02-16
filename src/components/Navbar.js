@@ -8,12 +8,12 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      path: '/To-do_React_app/home',
+      path: '/',
       text: 'Home',
     },
     {
       id: 2,
-      path: '/To-do_React_app/about',
+      path: 'about',
       text: 'About',
     },
   ];
