@@ -1,0 +1,43 @@
+.navBar {
+  background: rgb(155, 202, 155);
+  border: solid;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100vh;
+  width: 20vw;
+}
+
+.nav-icon {
+  border: none;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  font-size: 26px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.navBar .nav-icon {
+  background-color: rgb(155, 202, 155);
+}
+
+.navBar ul {
+  list-style-type: none;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.navBar ul li + li {
+  margin-top: 20px;
+}
+
+.navBar li:hover {
+  text-decoration: underline white;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
